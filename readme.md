@@ -19,18 +19,40 @@ Framework documentation: https://laravel.com/docs
 
 ### Install
 
-1 - Pull docker image
-```bash
-docker-compose pull
-```
-
-2 - Setup the app
+1 - Setup the app
 
 ```bash
 mv .env.example .env
 ```
 
 Then change the DB and user's credentials.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=app
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+```
+ROOT_ID=2
+ROOT_EMAIL=my@email.com
+ROOT_NAME=MyName
+ROOT_PASSWORD=MyPassword
+```
+
+1 - Pull docker image
+```bash
+docker-compose build
+```
+
+Then run
+
+```bash
+docker-compose up -d
+```
 
 3 - SSH to the container
 ```bash
@@ -41,8 +63,17 @@ docker exec -it laravel-vue-docker_app_1 /bin/bash
 ```bash
 /var/www# composer install
 /var/www# php artisan key:generate
+/var/www# php artisan migrate --seed
 /var/www# npm install
 ```
+
+### Run
+
+```bash
+docker-compose up -d
+```
+
+Then SSH to the container to execute `php artisan` commands or `npm` commands.
 
 ### Testing
 To run tests, SSH to the container then run `./vendor/bin/phpunit tests/*`
