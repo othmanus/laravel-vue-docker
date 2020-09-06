@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Normalize
+@import "~normalize.css/normalize.css";
+
+// Variables
+@import 'variables';
+
+// Tailwind
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+// SweetAlert2
+@import "~sweetalert2/src/sweetalert2.scss";
+
+body {
+  color: #252525;
+}
