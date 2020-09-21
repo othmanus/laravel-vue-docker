@@ -3,10 +3,7 @@
         <form class="bg-white shadow-md rounded px-2 py-2 sm:px-8 sm:py-6 mb-4" method="POST" action="/register">
             <input type="hidden" name="_token" :value="csrf">
             <div class="mb-4">
-                <input class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" name="first_name" type="text" placeholder="Your first name">
-            </div>
-            <div class="mb-4">
-                <input class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="last_name" name="last_name" type="text" placeholder="Your last name">
+                <input class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" name="name" type="text" placeholder="Your name">
             </div>
             <div class="mb-4">
                 <input class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="text" placeholder="Your email">
@@ -28,7 +25,7 @@
                 </div>
             </div>
             <div class="flex justify-between items-center">
-                <button class="block bg-taxi-500 hover:bg-taxi-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Register</button>
+                <button class="block bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Register</button>
             </div>
         </form>
     </div>
