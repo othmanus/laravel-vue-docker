@@ -77,3 +77,22 @@ Then SSH to the container to execute `php artisan` commands or `npm` commands.
 
 ### Testing
 To run tests, SSH to the container then run `./vendor/bin/phpunit tests/*`
+
+## Authentication
+
+The authentication views are based on Laravel's default scaffolding. You can use the custom Vuejs components by using them in login and register pages.
+
+# Run
+
+To access the homepage
+
+```
+http://localhost:8000/
+```
+
+To access the admin page:
+
+Login with the root admin credentials, then access to:
+```
+http://localhost:8000/admin
+```

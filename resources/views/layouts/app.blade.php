@@ -21,12 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <navbar role="{{ $user_role }}" style="height: 80px;"></navbar>
-
-        <main class="min-h-screen" style="padding-top: 80px;">
+        <main class="min-h-screen">
             @yield('content')
         </main>
-
     </div>
 </body>
 </html>
